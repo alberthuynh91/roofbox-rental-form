@@ -18,9 +18,13 @@ export const RentalForm = () => {
       .then(
         (result) => {
           console.log('Successfully submitted', result.text);
+          alert('Successfully submitted reservation!');
         },
         (error) => {
           console.log('Error submitting', error.text);
+          alert(
+            'Error submitting reservation. Please email alberthuynh91@gmail.com directly to book.'
+          );
         }
       );
   };
