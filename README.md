@@ -16,3 +16,5 @@ https://dashboard.emailjs.com/admin/templates/9viugun
 ### Deployment
 
 Deployed using Netlify
+
+https://singular-lebkuchen-ec9791.netlify.app/
