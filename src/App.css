@@ -1,15 +1,24 @@
 .App {
   display: flex;
   justify-content: center;
+  font-family: arial;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  padding: 0px 20px 0px 20px;
+  width: 100%;
 }
 
 .field-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-container {
+    width: 50%;
+  }
 }

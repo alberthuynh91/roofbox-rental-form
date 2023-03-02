@@ -1,9 +1,17 @@
+import './Field.css';
+
 const getFieldType = (props) => {
-  const { type, name, disabled = false, placeholder = '' } = props;
+  const {
+    type,
+    name,
+    disabled = false,
+    placeholder = '',
+    required = false,
+  } = props;
   if (type === 'textarea') {
     return (
       <>
-        <textarea name={name} placeholder={placeholder} />
+        <textarea name={name} placeholder={placeholder} required={required} />
       </>
     );
   }
@@ -16,6 +24,7 @@ const getFieldType = (props) => {
           name="vehicleHasCrossbars"
           value={value}
           onChange={onChange}
+          required={required}
         />
       </>
     );
@@ -28,6 +37,7 @@ const getFieldType = (props) => {
           name={name}
           disabled={disabled}
           placeholder={placeholder}
+          required={required}
         />
       </>
     );
@@ -35,9 +45,9 @@ const getFieldType = (props) => {
 };
 
 const Field = (props) => {
-  const { label } = props;
+  const { type, label } = props;
   return (
-    <div className="field-container">
+    <div className={`field-container-${type} field-container`}>
       {label && <label>{label}</label>}
       {getFieldType(props)}
     </div>

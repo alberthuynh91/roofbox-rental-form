@@ -2,8 +2,6 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Field from './Field';
 
-// Email template https://dashboard.emailjs.com/admin/templates/9viugun
-
 export const RentalForm = () => {
   const [vehicleHasCrossbars, setVehicleHasCrossbars] = useState(false);
   const form = useRef();
@@ -26,31 +24,49 @@ export const RentalForm = () => {
       );
   };
   return (
-    <form className="form-container" ref={form} onSubmit={sendEmail}>
+    <form
+      id="rentalForm"
+      className="form-container"
+      ref={form}
+      onSubmit={sendEmail}
+    >
       <h1>Roofbox Rental Form</h1>
-      <h2>Rental Information</h2>
-      <Field label="Full Name" type="text" name="name" />
-      <Field label="Phone Number" type="text" name="phone" />
-      <Field label="Pick Up Date" type="datetime-local" name="pickupDateTime" />
-      <Field label="Return Date" type="datetime-local" name="returnDateTime" />
+      <h2>Renter Information</h2>
+      <Field label="Full Name" type="text" name="name" required />
+      <Field label="Phone Number" type="text" name="phone" required />
+      <Field
+        label="Pickup Date"
+        type="datetime-local"
+        name="pickupDateTime"
+        required
+      />
+      <Field
+        label="Return Date"
+        type="datetime-local"
+        name="returnDateTime"
+        required
+      />
       <h2>Vehicle Information</h2>
       <Field
-        label="Vehicle Year"
+        label="Year"
         type="text"
         name="vehicleYear"
         placeholder="Year your vehicle was made? (e.g. 2005)"
+        required
       />
       <Field
-        label="Vehicle Make"
+        label="Make"
         type="text"
         name="vehicleMake"
         placeholder="Company which manufactured your vehicle? (e.g. Honda, Toyota, Ford, BMW)"
+        required
       />
       <Field
-        label="Vehicle Model"
+        label="Model"
         type="text"
         name="vehicleModel"
         placeholder="Specific model of your vehicle? (e.g. Civic, Prius, F150, 325i)"
+        required
       />
       <Field
         label="Please check box to confirm your vehicle has roof rails and cross bars? (If not, then installation of roofbox isn't possible)"
@@ -58,9 +74,10 @@ export const RentalForm = () => {
         name="vehicleHasCrossbars"
         value={vehicleHasCrossbars}
         onChange={(e) => setVehicleHasCrossbars(e.target.checked)}
+        required
       />
       <Field
-        label="Additional Information"
+        label="Additional Information (optional)"
         type="textarea"
         name="additionalInfo"
         placeholder="Please add any additional information about your reservation"
