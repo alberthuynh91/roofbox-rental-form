@@ -19,6 +19,7 @@ export const RentalForm = () => {
         (result) => {
           console.log('Successfully submitted', result.text);
           alert('Successfully submitted reservation!');
+          document?.rentalForm?.reset();
         },
         (error) => {
           console.log('Error submitting', error.text);
@@ -30,7 +31,7 @@ export const RentalForm = () => {
   };
   return (
     <form
-      id="rentalForm"
+      name="rentalForm"
       className="form-container"
       ref={form}
       onSubmit={sendEmail}
