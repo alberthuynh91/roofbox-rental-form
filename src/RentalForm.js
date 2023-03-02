@@ -35,17 +35,25 @@ export const RentalForm = () => {
       <h1>Roofbox Rental Form</h1>
       <h2>Renter Information</h2>
       <Field label="Full Name" type="text" name="name" required />
-      <Field label="Phone Number" type="text" name="phone" required />
+      <Field
+        label="Phone Number"
+        type="text"
+        name="phone"
+        placeholder="(e.g. 5103141803)"
+        required
+      />
       <Field
         label="Pickup Date"
         type="datetime-local"
         name="pickupDateTime"
+        placeholder="Select Date and Time"
         required
       />
       <Field
         label="Return Date"
         type="datetime-local"
         name="returnDateTime"
+        placeholder="Select Date and Time"
         required
       />
       <h2>Vehicle Information</h2>
