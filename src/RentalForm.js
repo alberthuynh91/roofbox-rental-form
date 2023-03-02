@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Field from './Field';
-import SkyboxBanner from './skybox-banner.jpg';
+import SkyboxBanner from './skybox-banner-min.jpg';
 
 export const RentalForm = () => {
   const [vehicleHasCrossbars, setVehicleHasCrossbars] = useState(false);
@@ -79,7 +79,7 @@ export const RentalForm = () => {
         required
       />
       <Field
-        label="Please check box to confirm your vehicle has roof rails and cross bars? (If not, then installation of roofbox isn't possible)"
+        label="Check box to confirm your vehicle has roof rails and cross bars? (If not, then installation of roofbox isn't possible)"
         type="checkbox"
         name="vehicleHasCrossbars"
         value={vehicleHasCrossbars}
