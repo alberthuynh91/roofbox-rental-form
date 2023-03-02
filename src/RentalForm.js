@@ -16,21 +16,21 @@ export const RentalForm = () => {
     console.log(`what is service_id: `, process.env.REACT_APP_PUBLIC_KEY);
     console.log(`what is template_id: `, TEMPLATE_ID);
     console.log(`what is public_id: `, PUBLIC_KEY);
-    // emailjs
-    //   .sendForm(
-    //     process.env.SERVICE_ID,
-    //     process.env.TEMPLATE_ID,
-    //     form.current,
-    //     process.env.PUBLIC_KEY
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log('Successfully submitted', result.text);
-    //     },
-    //     (error) => {
-    //       console.log('Error submitting', error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        form.current,
+        process.env.PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log('Successfully submitted', result.text);
+        },
+        (error) => {
+          console.log('Error submitting', error.text);
+        }
+      );
   };
   return (
     <form className="form-container" ref={form} onSubmit={sendEmail}>
