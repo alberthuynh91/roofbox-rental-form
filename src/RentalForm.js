@@ -9,6 +9,12 @@ export const RentalForm = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    const SERVICE_ID = process.env.SERVICE_ID;
+    const TEMPLATE_ID = process.env.TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.PUBLIC_KEY;
+    console.log(`what is service_id: `, SERVICE_ID);
+    console.log(`what is template_id: `, TEMPLATE_ID);
+    console.log(`what is public_id: `, PUBLIC_KEY);
     emailjs
       .sendForm(
         process.env.SERVICE_ID,
@@ -25,7 +31,6 @@ export const RentalForm = () => {
         }
       );
   };
-  console.log(`what is vehicleHasCrossbars: `, vehicleHasCrossbars);
   return (
     <form className="form-container" ref={form} onSubmit={sendEmail}>
       <h1>Roofbox Rental Form</h1>
@@ -35,19 +40,26 @@ export const RentalForm = () => {
       <Field label="Pick Up Date" type="datetime-local" name="pickupDateTime" />
       <Field label="Return Date" type="datetime-local" name="returnDateTime" />
       <h2>Vehicle Information</h2>
-      <Field label="Vehicle Year (e.g. 2005)" type="text" name="vehicleYear" />
       <Field
-        label="Vehicle Make (e.g. Honda, Toyota, Ford, BMW)"
+        label="Vehicle Year"
+        type="text"
+        name="vehicleYear"
+        placeholder="Year your vehicle was made? (e.g. 2005)"
+      />
+      <Field
+        label="Vehicle Make"
         type="text"
         name="vehicleMake"
+        placeholder="Company which manufactured your vehicle? (e.g. Honda, Toyota, Ford, BMW)"
       />
       <Field
-        label="Vehicle Model (e.g. Civic, Prius, F150, 325i)"
+        label="Vehicle Model"
         type="text"
         name="vehicleModel"
+        placeholder="Specific model of your vehicle? (e.g. Civic, Prius, F150, 325i)"
       />
       <Field
-        label="Does your vehicle have roof rails and cross bars?"
+        label="Please check box to confirm your vehicle has roof rails and cross bars? (If not, then installation of roofbox isn't possible)"
         type="checkbox"
         name="vehicleHasCrossbars"
         value={vehicleHasCrossbars}
@@ -57,6 +69,7 @@ export const RentalForm = () => {
         label="Additional Information"
         type="textarea"
         name="additionalInfo"
+        placeholder="Please add any additional information about your reservation"
       />
       <Field type="submit" value="Send" disabled={!vehicleHasCrossbars} />
     </form>

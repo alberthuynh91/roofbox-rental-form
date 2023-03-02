@@ -1,9 +1,9 @@
 const getFieldType = (props) => {
-  const { type, name, disabled = false } = props;
+  const { type, name, disabled = false, placeholder = '' } = props;
   if (type === 'textarea') {
     return (
       <>
-        <textarea name={name} />
+        <textarea name={name} placeholder={placeholder} />
       </>
     );
   }
@@ -23,7 +23,12 @@ const getFieldType = (props) => {
   if (type) {
     return (
       <>
-        <input type={type} name={name} disabled={disabled} />
+        <input
+          type={type}
+          name={name}
+          disabled={disabled}
+          placeholder={placeholder}
+        />
       </>
     );
   }

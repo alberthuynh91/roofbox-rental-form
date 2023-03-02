@@ -4,7 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Backlog
 
-1. Make vehicle make and model select dropdowns with predefined values
+1. Make vehicle year, make and model to use select dropdowns with predefined values instead of regular text input fields to improve data accuracy
+2. Format date time
+3. Add extra information / additional information about renting
+4. Add form validation (form cannot be submitting until all required fields are filled out)
 
 ## Available Scripts
 
