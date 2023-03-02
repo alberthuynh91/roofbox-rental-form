@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/roofbox-rental-form/static/css/main.e32c49a4.css",
+    "main.js": "/roofbox-rental-form/static/js/main.6597f428.js",
+    "static/js/787.b0ce5cf5.chunk.js": "/roofbox-rental-form/static/js/787.b0ce5cf5.chunk.js",
+    "static/media/skybox-banner-min.jpg": "/roofbox-rental-form/static/media/skybox-banner-min.c140f617f2ab40f75beb.jpg",
+    "index.html": "/roofbox-rental-form/index.html",
+    "main.e32c49a4.css.map": "/roofbox-rental-form/static/css/main.e32c49a4.css.map",
+    "main.6597f428.js.map": "/roofbox-rental-form/static/js/main.6597f428.js.map",
+    "787.b0ce5cf5.chunk.js.map": "/roofbox-rental-form/static/js/787.b0ce5cf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e32c49a4.css",
+    "static/js/main.6597f428.js"
+  ]
+}
