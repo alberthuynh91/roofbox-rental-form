@@ -9,19 +9,12 @@ export const RentalForm = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    const SERVICE_ID = process.env.SERVICE_ID;
-    const TEMPLATE_ID = process.env.TEMPLATE_ID;
-    const PUBLIC_KEY = process.env.PUBLIC_KEY;
-    console.log(`what is service_id: `, SERVICE_ID);
-    console.log(`what is service_id: `, process.env.REACT_APP_PUBLIC_KEY);
-    console.log(`what is template_id: `, TEMPLATE_ID);
-    console.log(`what is public_id: `, PUBLIC_KEY);
     emailjs
       .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.process.env.REACT_APP_SERVICE_ID,
+        process.env.process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        process.env.PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {

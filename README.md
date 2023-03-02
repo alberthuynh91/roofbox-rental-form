@@ -9,6 +9,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Add extra information / additional information about renting
 4. Add form validation (form cannot be submitting until all required fields are filled out)
 
+## EmailJS Template
+
+https://dashboard.emailjs.com/admin/templates/9viugun
+
 ## Available Scripts
 
 In the project directory, you can run:
