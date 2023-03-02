@@ -7,8 +7,17 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 15px 0px 15px;
+  overflow: auto;
   width: 100%;
+}
+
+.form-container h1 {
+  font-size: 25px;
+}
+
+.form-container h2 {
+  font-size: 20px;
 }
 
 .field-container {
@@ -17,8 +26,20 @@
   margin-bottom: 10px;
 }
 
+input[type="submit"] {
+  height: 40px;
+}
+
 @media only screen and (min-width: 768px) {
   .form-container {
     width: 50%;
+  }
+
+  .form-container h1 {
+    font-size: 30px;
+  }
+
+  .form-container h1 {
+    font-size: 25px;
   }
 }

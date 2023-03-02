@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Field from './Field';
+import SkyboxBanner from './skybox-banner.jpg';
 
 export const RentalForm = () => {
   const [vehicleHasCrossbars, setVehicleHasCrossbars] = useState(false);
@@ -30,6 +31,7 @@ export const RentalForm = () => {
       ref={form}
       onSubmit={sendEmail}
     >
+      <img src={SkyboxBanner} alt="yakima skybox" />
       <h1>Roofbox Rental Form</h1>
       <h2>Renter Information</h2>
       <Field label="Full Name" type="text" name="name" required />
