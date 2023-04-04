@@ -1,6 +1,6 @@
 # Roofbox Rental Form
 
-This is a simple form developed with React and EmailJS for booking a rental of a Yakima Skybox
+This is a simple form developed with React and EmailJS for placing a rental reservation for a Yakima Skybox (Cargo box for vehicle)
 
 ## Backlog
 
