@@ -2,6 +2,8 @@
 
 This is a simple form developed with React and EmailJS for placing a rental reservation for a Yakima Skybox (Cargo box for vehicle)
 
+Deployed app can be view [here](https://bert-roofbox-rental.netlify.app/)
+
 ## Backlog
 
 - Make vehicle year, make and model to use select dropdowns with predefined values instead of regular text input fields to improve data accuracy
@@ -14,8 +16,3 @@ This is a simple form developed with React and EmailJS for placing a rental rese
 
 https://dashboard.emailjs.com/admin/templates/9viugun
 
-### Deployment
-
-Deployed using Netlify
-
-https://singular-lebkuchen-ec9791.netlify.app/
